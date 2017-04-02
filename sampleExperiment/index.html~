@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Experiment Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, , initial-scale=1">
+    <style>
+	body {
+	    font-family: Monospace;
+	    background-color: #000;
+	    color: #000;
+	    margin: 0px;
+	    overflow: hidden;
+        }
+	span {
+	    font-family: Monospace;
+	    background-color: #000;
+	    color: #ffffff;
+	    margin: 0px;
+	    overflow: hidden;
+	}
+
+        /* The Modal Background */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>    
+</head>
+<body onload="loadExperiment()">
+    <!--- Three JS library --->
+    <script src="../PIE/three.min.js"></script>
+
+    <!--- Detector Utility to detect absence of webgl and corresponding error --->
+    <script src="../PIE/Detector.js"></script>
+
+    <!--- OrbitControl utility to move camera around (if required) --->
+    <script src="../PIE/OrbitControls.js"></script>
+
+    <!--- TrackballControl utility to implement Trackball type control (if required) --->
+    <script src="../PIE/TrackballControls.js"></script>
+
+    <!--- Data Gui utility to implement sliders and other data GUI elements (if required) --->
+    <script src="../PIE/dat.gui.min.js"></script>
+
+    <!--- Satistics utility to track and display statistics (if required) --->
+    <script src="../PIE/stats.min.js"></script>
+
+    <!--- The PIE Library --->
+    <script src="../PIE/PIElibrary.js"></script>
+
+    <!--- The Experiment Code --->
+    <script src="experiment.js"></script>
+</body>
+</html>

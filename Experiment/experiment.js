@@ -205,19 +205,25 @@ function grpdg(element,newpos){
 	gh.position.set(x,y,-2.8);
 	gh1.position.set(x,y,-2.8);
 	torus.position.set(x,y,-3);
-	if(x<0){
+	if(x<1){
 		flag=0;
-		max+=0.01;
+		if(max<1.57){
+				max+=0.05;
+		}
+		
 		boundaryT= (Math.acos(0.34/0.34)+1.57)/timep;
-		start.rotation.y+=0.05;
+		start.rotation.y+=0.01;
 		//gh.rotation.z=0.34;
 		//gh1.rotation.z=0.34;
 	}
 	else{
 		flag=0;
-		max+=-0.1;
+		if(max>-1.57){
+			max+=-0.05;
+		}
+		
 		boundaryT= (Math.acos(-0.34/0.34)+1.57)/timep;
-		start.rotation.y-=0.1;
+		start.rotation.y-=0.01;
 		//gh_1.rotation.z=-0.34;
 		//gh_2.rotation.z=-0.34;
 	}
@@ -249,6 +255,7 @@ catch(err){
 	PIErender();
 	/* initialise Other Variables */
     initialiseOtherVariables();
+    PIEstartAnimation();
 
 
 }
